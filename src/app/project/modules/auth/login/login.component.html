@@ -1,0 +1,40 @@
+<div class="wrapper">
+  <div class="liquid">
+    <img src="assets/core/sudut2.png" alt="liquid" class="liquid-img" />
+  </div>
+  <div class="container">
+    <h1>Login here</h1>
+    <p>Welcome back, you’ve been missed!</p>
+    <!-- Form Login -->
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <input
+          id="username"
+          type="email"
+          formControlName="username"
+          placeholder="Enter your username"
+        />
+      <div class="form-group">
+        <input
+          id="password"
+          type="password"
+          formControlName="password"
+          placeholder="Enter your password"
+        />
+      </div>
+      <a>Forgot your password?</a>
+      <button type="submit" (click)="onLogin()" [disabled]="loginForm.invalid">Sign in</button>
+    </form>
+    <p class="create-account" (click)="onNavigateRegister()">Create new account</p>
+    <p style="margin-bottom: 0rem; margin-top: 5rem; color: #1F41BB;">
+      Or continue with
+    </p>
+    <div class="social-login">
+      <a href="#"><i class="pi pi-google"></i></a>
+      <a href="#"><i class="pi pi-facebook"></i></a>
+      <a href="#"><i class="pi pi-twitter"></i></a>
+    </div>
+  </div>
+  <div class="liquid2">
+    <img src="assets/core/sudut1.png" alt="liquid" class="liquid-img" />
+  </div>
+</div>
