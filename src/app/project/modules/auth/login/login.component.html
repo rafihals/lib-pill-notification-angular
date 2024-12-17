@@ -1,3 +1,5 @@
+<p-toast position="top-left"/>
+<!-- <p-button onclick="showSuccess()"></p-button> -->
 <div class="wrapper">
   <div class="liquid">
     <img src="assets/core/sudut2.png" alt="liquid" class="liquid-img" />
@@ -22,7 +24,7 @@
         />
       </div>
       <a>Forgot your password?</a>
-      <button type="submit" (click)="onLogin()" [disabled]="loginForm.invalid">Sign in</button>
+      <button type="submit" [disabled]="loginForm.invalid">Sign in</button>
     </form>
     <p class="create-account" (click)="onNavigateRegister()">Create new account</p>
     <p style="margin-bottom: 0rem; margin-top: 5rem; color: #1F41BB;">

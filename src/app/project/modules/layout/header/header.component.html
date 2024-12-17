@@ -1,0 +1,22 @@
+<div class="header">
+  <h1>
+    Hello,
+  </h1>
+  <p>
+    good Morning
+  </p>
+
+  <div class="card flex justify-content-center">
+    <p-dropdown
+        [options]="cities"
+        [(ngModel)]="selectedCity"
+        [checkmark]="true"
+        optionLabel="name"
+        [showClear]="true"
+        placeholder="Select a City" />
+</div>
+
+  <div class="notification">
+    <i class="pi pi-bell" style="font-size: 24px;"></i>
+  </div>
+</div>

@@ -11,7 +11,7 @@ const routes: Routes = [
   declarations: [SettingsComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes) 
+    RouterModule.forChild(routes)
   ]
 })
 export class SettingsModule { }

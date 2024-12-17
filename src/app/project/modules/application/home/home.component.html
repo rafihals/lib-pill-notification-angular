@@ -1,88 +1,111 @@
-<p>
-  home works!
-</p>
 
-<div style="text-align: center; margin-top: 20px;">
-  <h1>Notifikasi Berkala</h1>
-  <button (click)="notificationService.startNotifications()">Mulai Notifikasi</button>
-  <button (click)="notificationService.stopNotifications()">Hentikan Notifikasi</button>
-</div>
-
-<p-toolbar [style]="{ 'border-radius': '3rem', 'padding': '1rem 1rem 1rem 1.5rem' }">
-  <ng-template #start>
-    <div class="flex items-center gap-2">
-      <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg"
-        style="width: 2rem; margin-right: 1rem">
-        <path d="..." fill="var(--p-primary-color)" />
-        <mask id="mask0_1_52" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="31" height="33">
-        </mask>
-      </svg>
-      <p-button label="Files" text plain />
-      <p-button label="Edit" text plain />
-      <p-button label="View" text plain />
-    </div>
-  </ng-template>
-
-  <ng-template #end>
-    <div class="flex items-center gap-2">
-      <p-button label="Share" severity="contrast" size="small" />
-      <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
-        [style]="{ width: '32px', height: '32px' }" />
-    </div>
-  </ng-template>
-</p-toolbar>
-
-<div class="card flex justify-content-center">
-  <p-toast position="top-right" />
-  <p-button (onClick)="show()" label="Show" />
-</div>
-
-<p-button>
-  mkm
-</p-button>
-
-
-<div class="card flex flex-column align-items-center overflow-hidden">
-  <div class="flex flex-column align-items-center gap-2">
-    <span class="text-xl font-medium">Scroll Down</span>
-    <span
-      class="slidedown-icon h-2rem w-2rem bg-primary border-circle inline-flex align-items-center justify-content-center">
-      <i class="pi pi-arrow-down"></i>
+<div class="content">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h2>
+      Explore categories
+    </h2>
+    <span class="see-all">
+      See all
     </span>
   </div>
-  <div class="h-30rem"></div>
-  <div pAnimateOnScroll enterClass="fadein" leaveClass="fadeout"
-    class="flex box shadow-4 justify-content-center align-items-center h-10rem w-10rem sm:h-15rem sm:w-15rem border-round animation-duration-1000">
-    <span class="text-3xl font-bold">fade-in</span>
+  <div class="categories">
+    <div class="category-card">
+      <img alt="Illustration of a person working on accounting" height="100"
+        src="https://storage.googleapis.com/a1aa/image/gTWAeZI9wsXwJSmfuhC7oR7HXHzPN9PLRK4QcUTzH1BfYB1nA.jpg"
+        width="100" />
+      <h3>
+        Accounting
+      </h3>
+      <p>
+        20 Courses
+      </p>
+    </div>
+    <div class="category-card">
+      <img alt="Illustration of biology related items" height="100"
+        src="https://storage.googleapis.com/a1aa/image/XKTB4t0qzaJcOJuKR2MirUeeCIojtPh78THlLQKmnVfCZB1nA.jpg"
+        width="100" />
+      <h3>
+        Biology
+      </h3>
+      <p>
+        15 Courses
+      </p>
+    </div>
+    <div class="category-card">
+      <img alt="Illustration of people taking photographs" height="100"
+        src="https://storage.googleapis.com/a1aa/image/N8jTVmY6qBp4E18KfsriwQrSGMW2VXHkAFBvcOt6MCMPWQ9JA.jpg"
+        width="100" />
+      <h3>
+        Photography
+      </h3>
+      <p>
+        25 Courses
+      </p>
+    </div>
+    <div class="category-card">
+      <img alt="Illustration of marketing activities" height="100"
+        src="https://storage.googleapis.com/a1aa/image/zPJDANzqTM59OxJb0qkXsRMoMepsd6EeHBQfqt95n0ePyCqPB.jpg"
+        width="100" />
+      <h3>
+        Marketing
+      </h3>
+      <p>
+        18 Courses
+      </p>
+    </div>
   </div>
-  <div class="h-30rem"></div>
-  <div pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeoutleft"
-    class="flex box shadow-4 justify-content-center align-items-center h-10rem w-10rem sm:h-15rem sm:w-15rem border-round animation-duration-1000 animation-ease-in-out">
-    <span class="text-3xl font-bold">fade-left</span>
-  </div>
-  <div class="h-30rem"></div>
-  <div pAnimateOnScroll enterClass="fadeinright" leaveClass="fadeoutright"
-    class="flex box shadow-4 justify-content-center align-items-center h-10rem w-10rem sm:h-15rem sm:w-15rem border-round animation-duration-1000 animation-ease-in-out">
-    <span class="text-3xl font-bold">fade-right</span>
-  </div>
-  <div class="h-30rem"></div>
-  <div pAnimateOnScroll enterClass="zoomin" leaveClass="fadeout"
-    class="flex box shadow-4 justify-content-center align-items-center h-10rem w-10rem sm:h-15rem sm:w-15rem border-round animation-duration-1000">
-    <span class="text-3xl font-bold">zoom</span>
-  </div>
-  <div class="h-30rem"></div>
-  <div pAnimateOnScroll enterClass="flipleft" leaveClass="fadeout"
-    class="flex box shadow-4 justify-content-center align-items-center h-10rem w-10rem sm:h-15rem sm:w-15rem border-round animation-duration-1000 animation-ease-in-out">
-    <span class="text-3xl font-bold">flip-left</span>
-  </div>
-  <div class="h-30rem"></div>
-  <div pAnimateOnScroll enterClass="flipup" leaveClass="fadeout"
-    class="flex box shadow-4 justify-content-center align-items-center h-10rem w-10rem sm:h-15rem sm:w-15rem border-round animation-duration-1000 animation-ease-in-out">
-    <span class="text-3xl font-bold">flip-y</span>
-  </div>
-  <div class="h-30rem"></div>
-  <div pAnimateOnScroll enterClass="scalein" leaveClass="fadeout"
-    class="flex box shadow-4 justify-content-center align-items-center h-10rem w-10rem sm:h-15rem sm:w-15rem border-round animation-duration-1000 animation-ease-in-out">
-    <span class="text-3xl font-bold">scalein</span>
-  </div>
+</div>
+<div class="footer">
+  <i class="fas fa-home active">
+  </i>
+  <i class="fas fa-comment">
+  </i>
+  <i class="fas fa-bell">
+  </i>
+  <i class="fas fa-user">
+  </i>
+</div>
+
+
+<div class="card">
+  <p-dataView #dv [value]="products" [sortField]="sortField" [sortOrder]="sortOrder">
+      <ng-template pTemplate="header">
+          <div class="flex flex-column md:flex-row md:justify-content-between">
+              <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price" (onChange)="onSortChange($event)" styleClass="mb-2 md:mb-0" />
+          </div>
+      </ng-template>
+      <ng-template pTemplate="list" let-products>
+          <div class="grid grid-nogutter">
+              <div class="col-12" *ngFor="let item of products; let first = first" class="col-12">
+                  <div class="flex flex-column sm:flex-row sm:align-items-center p-4 gap-3" [ngClass]="{ 'border-top-1 surface-border': !first }">
+                      <div class="md:w-10rem relative">
+                          <img class="block xl:block mx-auto border-round w-full" [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + item.image" [alt]="item.name" />
+                          <p-tag [value]="item.inventoryStatus" [severity]="getSeverity(item) || undefined" class="absolute" [style.left.px]="4" [style.top.px]="4" />
+                      </div>
+                      <div class="flex flex-column md:flex-row justify-content-between md:align-items-center flex-1 gap-4">
+                          <div class="flex flex-row md:flex-column justify-content-between align-items-start gap-2">
+                              <div>
+                                  <span class="font-medium text-secondary text-sm">{{ item.category }}</span>
+                                  <div class="text-lg font-medium text-900 mt-2">{{ item.name }}</div>
+                              </div>
+                              <div class="surface-100 p-1" style="border-radius: 30px">
+                                  <div class="surface-0 flex align-items-center gap-2 justify-content-center py-1 px-2" style="border-radius: 30px; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.04), 0px 1px 2px 0px rgba(0, 0, 0, 0.06)">
+                                      <span class="text-900 font-medium text-sm">{{ item.rating }}</span>
+                                      <i class="pi pi-star-fill text-yellow-500"></i>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="flex flex-column md:align-items-end gap-5">
+                              <span class="text-xl font-semibold text-900">{{ '$' + item.price }}</span>
+                              <div class="flex flex-row-reverse md:flex-row gap-2">
+                                  <p-button icon="pi pi-heart" [outlined]="true" />
+                                  <p-button icon="pi pi-shopping-cart" class="flex-auto md:flex-initial white-space-nowrap" label="Buy Now" [disabled]="item.inventoryStatus === 'OUTOFSTOCK'" />
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  </ng-template>
+  </p-dataView>
 </div>

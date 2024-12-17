@@ -1,0 +1,17 @@
+.content {
+  padding: 9rem 20px 20px 20px;
+}
+
+::ng-deep.p-tabview .p-tabview-panels {
+  padding: 2.25rem 0rem 1.25rem 0rem;
+}
+
+::ng-deep.p-card {
+  margin-bottom: 1.25rem;
+}
+
+.buten {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
